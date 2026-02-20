@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      context: ./django-realworld-example-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./django-realworld-example-app:/app
+
+  frontend:
+    build:
+      context: ./react-redux-realworld-example-app
+    ports:
+      - "4100:4100"
+    environment:
+      HOST: 0.0.0.0
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      - ./react-redux-realworld-example-app:/app
+      - /app/node_modules
+    command: sh -c "if [ ! -d node_modules ]; then npm install; fi; npm start"
+    depends_on:
+      - backend

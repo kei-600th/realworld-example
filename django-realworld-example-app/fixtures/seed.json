@@ -1,0 +1,142 @@
+[
+  {
+    "model": "authentication.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$alice_salt$g0tdb/DtKVuYW14zmmUeGSI8E0WFlUu7jx9Pejm4MGw=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "alice",
+      "email": "alice@example.com",
+      "is_active": true,
+      "is_staff": false,
+      "created_at": "2026-02-20T00:00:00Z",
+      "updated_at": "2026-02-20T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$bob_salt$XaP7zIer4rcoLOZx0j4z60BTBK2SY2zCfH0k/Y5r2SU=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "bob",
+      "email": "bob@example.com",
+      "is_active": true,
+      "is_staff": false,
+      "created_at": "2026-02-20T00:00:00Z",
+      "updated_at": "2026-02-20T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "profiles.profile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "bio": "Frontend engineer who loves React.",
+      "image": "https://i.pravatar.cc/150?img=5",
+      "follows": [2],
+      "favorites": [1],
+      "created_at": "2026-02-20T00:00:00Z",
+      "updated_at": "2026-02-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "profiles.profile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "bio": "Backend engineer who likes Django.",
+      "image": "https://i.pravatar.cc/150?img=8",
+      "follows": [],
+      "favorites": [1, 2],
+      "created_at": "2026-02-20T00:00:00Z",
+      "updated_at": "2026-02-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "articles.tag",
+    "pk": 1,
+    "fields": {
+      "tag": "react",
+      "slug": "react",
+      "created_at": "2026-02-20T00:00:00Z",
+      "updated_at": "2026-02-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "articles.tag",
+    "pk": 2,
+    "fields": {
+      "tag": "django",
+      "slug": "django",
+      "created_at": "2026-02-20T00:00:00Z",
+      "updated_at": "2026-02-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "articles.tag",
+    "pk": 3,
+    "fields": {
+      "tag": "realworld",
+      "slug": "realworld",
+      "created_at": "2026-02-20T00:00:00Z",
+      "updated_at": "2026-02-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "articles.article",
+    "pk": 1,
+    "fields": {
+      "slug": "hello-world",
+      "title": "Hello World",
+      "description": "First post in the RealWorld sample app.",
+      "body": "This is a sample article body for the RealWorld app.",
+      "author": 1,
+      "tags": [1, 3],
+      "created_at": "2026-02-20T00:00:00Z",
+      "updated_at": "2026-02-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "articles.article",
+    "pk": 2,
+    "fields": {
+      "slug": "second-post",
+      "title": "Second Post",
+      "description": "Another article to populate the feed.",
+      "body": "More content for testing pagination and tags.",
+      "author": 2,
+      "tags": [2, 3],
+      "created_at": "2026-02-20T00:00:00Z",
+      "updated_at": "2026-02-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "articles.comment",
+    "pk": 1,
+    "fields": {
+      "body": "Nice post!",
+      "article": 1,
+      "author": 2,
+      "created_at": "2026-02-20T00:00:00Z",
+      "updated_at": "2026-02-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "articles.comment",
+    "pk": 2,
+    "fields": {
+      "body": "Thanks for the feedback!",
+      "article": 2,
+      "author": 1,
+      "created_at": "2026-02-20T00:00:00Z",
+      "updated_at": "2026-02-20T00:00:00Z"
+    }
+  }
+]

@@ -2,6 +2,8 @@
 
 このリポジトリはrealworldというcrudを使用した基本的なアプリ開発ossのサンプルコードを複合させたものです。
 
+https://github.com/realworld-apps/realworld
+
 ### org
 
 * https://github.com/gothinkster/django-realworld-example-app
